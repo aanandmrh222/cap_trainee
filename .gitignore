@@ -36,3 +36,6 @@ project.lock.json
 # Logs & temp
 *.log
 *.tmp
+
+# folder to ignore
+Notes/
