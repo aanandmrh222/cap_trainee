@@ -39,3 +39,7 @@ project.lock.json
 
 # folder to ignore
 Notes/
+
+# .NET build outputs
+**/bin/
+**/obj/
