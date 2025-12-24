@@ -1,27 +1,37 @@
-# IDE & user-specific
+# ===============================
+# IDE & User-specific files
+# ===============================
 .vs/
+.vscode/
+.idea/
 *.user
 *.userosscache
 *.suo
 *.sln.docstates
 
-# Build outputs
-[Bb]in/
-[Oo]bj/
+# ===============================
+# .NET build outputs
+# ===============================
+**/bin/
+**/obj/
 [Dd]ebug/
 [Rr]elease/
 [Xx]64/
 [Xx]86/
 [Aa][Rr][Mm]*/
 
-# Test and profiling
+# ===============================
+# Test & profiling
+# ===============================
 [Tt]est[Rr]esult*/
 [Tt]est[Rr]esults*/
 *.coverage*
 *.vsp?
 *.psess
 
+# ===============================
 # NuGet
+# ===============================
 *.nupkg
 packages/
 project.lock.json
@@ -29,17 +39,19 @@ project.lock.json
 *.nuget.props
 *.nuget.targets
 
-# Tooling
-.vscode/
-.idea/
-
-# Logs & temp
+# ===============================
+# Logs & temp files
+# ===============================
 *.log
 *.tmp
 
-# folder to ignore
+# ===============================
+# Custom folders
+# ===============================
 Notes/
 
-# .NET build outputs
-**/bin/
-**/obj/
+# ===============================
+# OS generated files
+# ===============================
+.DS_Store
+Thumbs.db
