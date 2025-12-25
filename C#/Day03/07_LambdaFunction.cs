@@ -1,3 +1,14 @@
+/*
+1. Func<int, int>  -> first int is input parameter second is return type
+Func is a built-in generic delegate in C#
+It represents a method reference
+The last type is the return type
+The types before it are input parameters
+So:
+Func<int, int>
+
+*/
+
 using System;
 
 class LambdaFunction

@@ -1,3 +1,10 @@
+/*
+Each object contains:
+Properties → Data (Fields)
+Actions → Behavior (Methods)
+*/
+
+
 using System;
 
 namespace Day03
@@ -16,7 +23,7 @@ namespace Day03
 
     public class Employee
     {
-        // Means: name is allowed to be null
+        // Means: name is allowed to be null --> string?
         public string? name;
         public double salary;
 

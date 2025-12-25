@@ -5,13 +5,25 @@ namespace Day04
     {
         public static void Main(string[] args)
         {
+
+            // ---------------- Constructor -----------------------
+            // ConstructorCaller.ConstructorCallerMethod();
+
+
+            // ----------  Inhericance ------------------
             // Bank b1 = new Bank(100);
             // b1.Print();
 
             // Deposite fd = new Deposite();
             // fd.Print();
 
+            // InhericanceAllCaller.InhericanceAllCallerMethod();
 
+            // ------------------------- Property, GET SET, Indexer --------------
+            // IndexerCaller.IndexerCallerMethod();
+
+
+            // ---------------- Student Profile -------------------
             // Student student = new Student("ABC123") {
             //     AdmissionYear = 2022
             // };
@@ -32,11 +44,8 @@ namespace Day04
             // Console.WriteLine($"Admission Year  : {student.AdmissionYear}");
 
 
-            // Circle c1 = new Circle(14);
-            // Console.WriteLine(c1.Area);
 
-
-
+            // ---------------- Library Management -------------------
             // Library library = new Library();
 
             // // Add books using integer indexer

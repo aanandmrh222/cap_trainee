@@ -13,7 +13,7 @@ class Practice
         Console.WriteLine();
     }
 
-    // param Example
+    // param Example -> Allows passing multiple values.
     public static void sum(params int[] nums)
     {
         int sum = 0;
@@ -27,14 +27,31 @@ class Practice
     }
 
 
-    // Reference Example
+    // Reference Example --> Pass by Reference -> Changes made inside the method affect the original variable.
 
     public static void decreaseByTen(ref int a)
     {
         a = a - 10;
     }
+    /*
+    int a = 20;
+    Increase(ref a);
+    Console.WriteLine(a); // 10
+    */
 
-    // Out Example
+    /*
+    Example (Without ref)
+    void Increase(int x)
+    {
+    x = x + 10;
+    }
+    int a = 20;
+    Increase(a);
+    Console.WriteLine(a);   // 20
+
+    */
+
+    // Out Example -->  Output Parameters -> Used to return multiple values from a method.
     public static void Divide(int a, int b, out int quotient, out int remainder)
     {
         quotient = a / b;
@@ -49,7 +66,8 @@ class Practice
             grade = "Fail";
     }
 
-    // "In" example
+
+    // "In" example --> Read-Only Reference -> Passes variable by reference without allowing modification.
     public static void Show(in int number)
     {
         Console.WriteLine(number);
@@ -104,7 +122,7 @@ class Practice
         Console.WriteLine("Sum: " + sum);
     }
 
-    // Local Method Example
+    // ------------------- Local Method Example
     public static void Process()
     {
         string status = "Processing...";
@@ -118,42 +136,3 @@ class Practice
     }
 }
 
-
-
-/*
----------------------------------------------------------------------------
-using System;
-using System.Diagnostics.CodeAnalysis;
-
-// class For
-// {
-//     public static int Sum(params int[] nums)
-//     {
-//         int total = 0;
-//         foreach (int n in nums)
-//         {
-//             total += n;
-//         }
-//         total += a;
-//         return total;
-//     }
-// }
-
-using System;
-
-class For
-{
-    public static int Sum(params int[] nums)
-    {
-        int total = 0;
-        foreach (int n in nums)
-        {
-            total += n;
-        }
-        
-
-        return total;
-    }
-}
-
-*/

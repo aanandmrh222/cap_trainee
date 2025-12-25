@@ -1,3 +1,15 @@
+/*
+Modifier   ------>     Accessibility
+public       ->        Accessible from anywhere
+private      ->        Accessible only within the same class
+protected    ->        Accessible within the class and derived (child) classes
+internal     ->        Accessible within the same assembly/project
+
+
+// Constructor: runs automatically when a Wallet object is created  
+*/
+
+
 using System;
 
 namespace Day03

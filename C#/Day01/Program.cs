@@ -28,5 +28,6 @@ class Program
         Console.WriteLine(Questions.SumOfDigit(765));
         Console.WriteLine(Questions.ReverseNum(765));
         
+        InsurancePremium.InsurancePremiumCallerMethod();
     }
 }
