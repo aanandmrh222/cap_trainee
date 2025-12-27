@@ -84,7 +84,7 @@ class BillingService
         LastBill = bill;
         HasLastBill = true;
 
-        Console.WriteLine("Bill created successfully ✅✅");
+        Console.WriteLine("Bill created successfully");
         Console.WriteLine("Gross Amount: " + bill.GrossAmount);
         Console.WriteLine("Discount Amount: " + bill.DiscountAmount);
         Console.WriteLine("Final Payable: " + bill.FinalPayable);
@@ -116,7 +116,7 @@ class BillingService
     {
         LastBill = null;
         HasLastBill = false;
-        Console.WriteLine("Last bill cleared ❌");
+        Console.WriteLine("Last bill cleared");
     }
 }
 
@@ -150,7 +150,7 @@ class MediSureClinicCaller
                     break;
 
                 case 4:
-                    Console.WriteLine("Thank you. Application closed normally. 👍");
+                    Console.WriteLine("Thank you. Application closed normally.");
                     running = false;
                     break;
 

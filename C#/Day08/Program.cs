@@ -5,6 +5,9 @@ class Program
     public static void Main()
     {
         // MediSure Clinic 
-        MediSureClinicCaller.MediSureClinicAssiM();
+        // MediSureClinicCaller.MediSureClinicAssiM();
+
+        // Quick MArt
+        SaleTransaction.QuickMartCallerM();
     }
 }
