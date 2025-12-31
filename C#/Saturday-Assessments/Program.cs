@@ -11,6 +11,13 @@ class Program
         // SaleTransaction.QuickMartCallerM();
 
         // EnterpriseAssignment
-        EnterpriseAssignment.EnterpriseAssignmentM();
+        // EnterpriseAssignment.EnterpriseAssignmentM();
+
+        // face id
+        // Security.Authentication.FaceIDCaller.FaceIDCallerMethod();
+
+        // StreamBuzz
+        StreamBuzz.StreamBuzzCallerMethod();
+        
     }
 }
