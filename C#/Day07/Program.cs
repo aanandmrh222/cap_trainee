@@ -13,6 +13,9 @@ class Program
         // ----------- Questions
         // Questions1.QuestionsM();
 
+        // string learning
+        StringAll.StringAllM();
+
         // ----------- ScenarioQue
         // StringQue.StringQueM();
 
@@ -21,6 +24,7 @@ class Program
 
         // Enterprise Assignment 
         // EnterpriseAssignment.EnterpriseAssignmentM();
+        
 
 
     }
