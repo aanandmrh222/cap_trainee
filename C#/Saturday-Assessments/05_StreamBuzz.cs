@@ -15,7 +15,7 @@ public class StreamBuzz
     public void RegisterCreator(CreatorStats record)
     {
         EngagementBoard.Add(record);
-        Console.WriteLine("Creator registered successfully");
+        Console.WriteLine("Creator registered successfully...");
     }
 
     public Dictionary<string, int> GetTopPostCounts(List<CreatorStats> records, double likeThreshold)
