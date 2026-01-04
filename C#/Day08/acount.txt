@@ -1,0 +1,7 @@
+Account Number : 1234567890
+Account Holder : Aanand Kumar
+Account Type   : Savings
+Branch         : LPU Phagwara
+IFSC Code      : LPU0001234
+Current Balance: 5000
+Status         : Active
