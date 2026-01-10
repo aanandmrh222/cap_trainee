@@ -113,41 +113,41 @@ namespace DialingCodesApp
     {
         public static void TeleCallerM()
         {
-            // task1
+            // task 1
             Dictionary<int, string> emptyDict = DialingCodes.GetEmptyDictionary(); 
             Console.WriteLine($"Empty Dictionary Count: {emptyDict.Count}");
 
-            // task2 
+            // task 2 
             Dictionary<int, string> existingDict = DialingCodes.GetExistingDictionary();
             Console.WriteLine("\nExisting Dictionary:");
             DialingCodes.PrintDictionary(existingDict);
 
-            // task3
+            // task 3
             Dictionary<int, string> singleEntryDict = DialingCodes.AddCountryToEmptyDictionary(81,"Japan");
             Console.WriteLine("\nSingle Entry Dictionary:");
             DialingCodes.PrintDictionary(singleEntryDict);
 
-            // task4
+            // task 4
             DialingCodes.AddCountryToExistingDictionary(existingDict, 44, "United Kingdom");
             // DialingCodes.PrintDictionary(existingDict);
 
-            // task5
+            // task 5
             string country = DialingCodes.GetCountryNameFromDictionary(existingDict, 91);
             Console.WriteLine($"\nCountry for code 91: {country}");
 
-            // task6
+            // task 6
             bool exist = DialingCodes.CheckCodeExists(existingDict, 911);
             Console.WriteLine($"Does code 911 exist? {exist}");
 
-            // task7
+            // task 7
             DialingCodes.UpdateDictionary(existingDict, 91, "New India");
             // DialingCodes.PrintDictionary(existingDict);
 
-            // task8
+            // task 8
             DialingCodes.RemoveCountryFromDictionary(existingDict, 91);
             // DialingCodes.PrintDictionary(existingDict);
 
-            // task9
+            // task 9
             string longestName = DialingCodes.FindLongestCountryName(existingDict);
             Console.WriteLine($"\nLongest Country Name: {longestName}");
         }
