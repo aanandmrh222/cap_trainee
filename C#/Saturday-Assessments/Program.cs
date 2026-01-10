@@ -12,7 +12,15 @@ class Program
 
 
         // StreamBuzz
-        StreamBuzz.StreamBuzzCallerMethod();
+        // StreamBuzz.StreamBuzzCallerMethod();
+
+
+        // Telephone Dialing Code
+        // DialingCodesApp.TeleCaller.TeleCallerM();
+
+        // Sugar Bliss Bakery Code
+        ChocolateMain.ChocolateMainCallerMethod();
+
         
     }
 }
