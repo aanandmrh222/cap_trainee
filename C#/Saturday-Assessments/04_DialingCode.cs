@@ -1,0 +1,155 @@
+using System;
+using System.Collections.Generic;
+
+namespace DialingCodesApp
+{
+    public static class DialingCodes
+    {
+        // Task 1: Create an Empty Dialing Code Dictionary 
+        public static Dictionary<int, string> GetEmptyDictionary()
+        {
+            return new Dictionary<int, string>();
+        }
+
+
+        // Task 2: Create a Dictionary with Predefined Country Codes 
+        public static Dictionary<int, string> GetExistingDictionary()
+        {
+            return new Dictionary<int, string>
+            {
+                {1, "United States of America"},
+                {55, "Brazil"},
+                {91, "India"}
+            };
+        }
+
+
+        // Task 3: Add a Country to an Empty Dictionary
+        public static Dictionary<int, string> AddCountryToEmptyDictionary(int countryCode, string countryName)
+        {
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            dict.Add(countryCode, countryName);
+            return dict;
+        }
+
+
+        // Task 4: Add a Country to an Existing Dictionary
+        public static Dictionary<int, string> AddCountryToExistingDictionary(Dictionary<int, string> existingDictionary, int countryCode, string countryName)
+        {
+            existingDictionary[countryCode] = countryName;
+            return existingDictionary;
+        }
+
+
+        // Task 5: Retrieve a Country Name Using Country Code
+        public static string GetCountryNameFromDictionary(Dictionary<int, string> existingDictionary, int countryCode)
+        {
+            if(existingDictionary.ContainsKey(countryCode))
+            {
+                return existingDictionary[countryCode];
+            }
+            return string.Empty;
+        }
+
+
+        // Task 6: Check if a Country Code Exists
+        public static bool CheckCodeExists(Dictionary<int, string> existingDictionary, int countryCode)
+        {
+            return existingDictionary.ContainsKey(countryCode);
+        }
+
+
+        // Task 7: Update an Existing Country Name
+        public static Dictionary<int, string> UpdateDictionary(Dictionary<int, string> existingDictionary, int countryCode, string countryName)
+        {
+            if(existingDictionary.ContainsKey(countryCode))
+            {
+                existingDictionary[countryCode] = countryName;
+            }
+            return existingDictionary;
+        }
+
+
+        // Task 8: Remove a Country from Dictionary
+        public static Dictionary<int, string> RemoveCountryFromDictionary(Dictionary<int, string> existingDictionary, int countryCode)
+        {
+            if(existingDictionary.ContainsKey(countryCode))
+            {
+                existingDictionary.Remove(countryCode);
+            }
+            return existingDictionary;
+        }
+
+
+        // Task 9: Find the Longest Country Name
+        public static string FindLongestCountryName(Dictionary<int, string> existingDictionary)
+        {
+            string longestName = "";
+            foreach(var item in existingDictionary.Values)
+            {
+                if(item.Length > longestName.Length)
+                {
+                    longestName = item;
+                }
+            }
+            return longestName;
+        }
+
+
+        // task 10
+        public static void PrintDictionary(Dictionary<int, string> dictionary)
+        {
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine($"Code: {item.Key}, Country: {item.Value}");
+            }
+        }
+
+    }
+
+
+    // Main Method
+    public class TeleCaller
+    {
+        public static void TeleCallerM()
+        {
+            // task1
+            Dictionary<int, string> emptyDict = DialingCodes.GetEmptyDictionary(); 
+            Console.WriteLine($"Empty Dictionary Count: {emptyDict.Count}");
+
+            // task2 
+            Dictionary<int, string> existingDict = DialingCodes.GetExistingDictionary();
+            Console.WriteLine("\nExisting Dictionary:");
+            DialingCodes.PrintDictionary(existingDict);
+
+            // task3
+            Dictionary<int, string> singleEntryDict = DialingCodes.AddCountryToEmptyDictionary(81,"Japan");
+            Console.WriteLine("\nSingle Entry Dictionary:");
+            DialingCodes.PrintDictionary(singleEntryDict);
+
+            // task4
+            DialingCodes.AddCountryToExistingDictionary(existingDict, 44, "United Kingdom");
+            // DialingCodes.PrintDictionary(existingDict);
+
+            // task5
+            string country = DialingCodes.GetCountryNameFromDictionary(existingDict, 91);
+            Console.WriteLine($"\nCountry for code 91: {country}");
+
+            // task6
+            bool exist = DialingCodes.CheckCodeExists(existingDict, 911);
+            Console.WriteLine($"Does code 911 exist? {exist}");
+
+            // task7
+            DialingCodes.UpdateDictionary(existingDict, 91, "New India");
+            // DialingCodes.PrintDictionary(existingDict);
+
+            // task8
+            DialingCodes.RemoveCountryFromDictionary(existingDict, 91);
+            // DialingCodes.PrintDictionary(existingDict);
+
+            // task9
+            string longestName = DialingCodes.FindLongestCountryName(existingDict);
+            Console.WriteLine($"\nLongest Country Name: {longestName}");
+        }
+    }
+}
