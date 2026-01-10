@@ -62,15 +62,24 @@ class Program
         // Console.WriteLine($"User Loaded: {user.Id}, {user.Name}"); 
 
 
-        User user = new User { Id = 2, Name = "Bob" }; 
+        // User user = new User { Id = 2, Name = "Bob" }; 
  
-        using (BinaryWriter writer = new BinaryWriter(File.Open("user.bin", FileMode.Create))) 
-        { 
-            writer.Write(user.Id); 
-            writer.Write(user.Name); 
-        } 
+        // using (BinaryWriter writer = new BinaryWriter(File.Open("user.bin", FileMode.Create))) 
+        // { 
+        //     writer.Write(user.Id); 
+        //     writer.Write(user.Name); 
+        // } 
  
-        Console.WriteLine("Binary user data saved."); 
+        // Console.WriteLine("Binary user data saved."); 
+
+
+        // FileInfoClass.FileInfoClassM();
+
+        // DirectoryClass.DirectoryClassM();
+
+        // SerializationClass.SerializationClassM();
+
+        Caller.CallerMethod();
 
     }
 }
