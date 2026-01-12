@@ -145,6 +145,8 @@ class Program
         Console.WriteLine($"Total Memory After GC: {GC.GetTotalMemory(false)} bytes");
         Console.WriteLine($"Generation of a new object: {GC.GetGeneration(new object())}");
 
-        EnterpriseLogSystem.EnterpriseCaller.EnterpriseCallerMethod();
+        // EnterpriseLogSystem.EnterpriseCaller.EnterpriseCallerMethod();
+
+        RobotSensorCaller.RobotSensorCallerM();
     }
 }
