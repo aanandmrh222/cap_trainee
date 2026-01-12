@@ -28,7 +28,9 @@ class Program
         // Console.WriteLine(sortDescending(5,5));
 
 
-        EcommerceOrderCaller.EcommerceOrderCallerM();
+        // EcommerceOrderCaller.EcommerceOrderCallerM();
+
+        HospitalCommCaller.HospitalCommCallerM();
         
     }
 }
