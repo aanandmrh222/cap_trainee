@@ -8,12 +8,11 @@ namespace MiniSocialMedia
 {
     class Program
     {
-        // ===================== STATIC DATA MEMBERS =====================
+        // STATIC DATA MEMBERS
         private static Repository<User> _users = new();
         private static User? _currentUser = null;
         private static readonly string _dataFile = "social-data.json";
 
-        // ===================== MAIN =====================
         static void Main()
         {
             Console.Title = "MiniSocial - Console Edition";
@@ -49,7 +48,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== LOGIN MENU =====================
+        // LOGIN MENU 
         static void ShowLoginMenu()
         {
             Console.WriteLine("1. Register");
@@ -77,7 +76,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== REGISTER =====================
+        // REGISTER 
         static void Register()
         {
             Console.Write("Username: ");
@@ -99,7 +98,7 @@ namespace MiniSocialMedia
             Console.WriteLine("Registration successful!");
         }
 
-        // ===================== LOGIN =====================
+        //  LOGIN 
         static void Login()
         {
             Console.Write("Username: ");
@@ -130,7 +129,7 @@ namespace MiniSocialMedia
             Console.WriteLine($"Logged in as {_currentUser.Username}");
         }
 
-        // ===================== MAIN MENU =====================
+        // MAIN MENU 
         static void ShowMainMenu()
         {
             Console.WriteLine($"Logged in as {_currentUser}");
@@ -175,7 +174,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== POST MESSAGE =====================
+        // POST MESSAGE
         static void PostMessage()
         {
             Console.Write("Enter post (empty to cancel): ");
@@ -188,7 +187,7 @@ namespace MiniSocialMedia
             Console.WriteLine("Post added successfully");
         }
 
-        // ===================== TIMELINE =====================
+        // TIMELINE 
         static void ShowTimeline()
         {
             var timelinePosts = _users.GetAll()
@@ -201,7 +200,7 @@ namespace MiniSocialMedia
             ShowPosts(timelinePosts);
         }
 
-        // ===================== SHOW POSTS =====================
+        // SHOW POSTS 
         static void ShowPosts(IEnumerable<Post> posts)
         {
             var list = posts.Take(10).ToList();
@@ -220,7 +219,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== FOLLOW USER =====================
+        // FOLLOW USER 
         static void FollowUser()
         {
             Console.Write("Username to follow (empty to cancel): ");
@@ -239,7 +238,7 @@ namespace MiniSocialMedia
             Console.WriteLine($"You are now following {username}");
         }
 
-        // ===================== LIST USERS =====================
+        // LIST USERS 
         static void ListUsers()
         {
             foreach (var user in _users.GetAll().OrderBy(u => u))
@@ -248,7 +247,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== SAVE DATA =====================
+        // SAVE DATA 
         static void SaveData()
         {
             try
@@ -263,7 +262,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== LOAD DATA =====================
+        // LOAD DATA 
         static void LoadData()
         {
             try
@@ -286,7 +285,7 @@ namespace MiniSocialMedia
             }
         }
 
-        // ===================== LOG ERROR =====================
+        // LOG ERROR 
         static void LogError(Exception ex)
         {
             try
@@ -294,13 +293,13 @@ namespace MiniSocialMedia
                 File.AppendAllText("error.log",
                     $"{DateTime.Now}\n{ex.Message}\n{ex.StackTrace}\n\n");
             }
-            catch
+            catch (Exception ex)
             {
-                // logging must never crash the app
+                Console.WriteLine(ex.Message);
             }
         }
 
-        // ===================== CONSOLE COLOR WRITE =====================
+        //  CONSOLE COLOR WRITE 
         static void ConsoleColorWrite(ConsoleColor color, string message)
         {
             var old = Console.ForegroundColor;
